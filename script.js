@@ -3,46 +3,60 @@ const portfolioData = {
     // Array of project links - Add your website URLs here
     projects: [
         {
-            title: "E-Commerce Platform",
-            description: "A modern e-commerce website with shopping cart, payment integration, and admin dashboard.",
-            url: "https://example.com", // Replace with your actual website URL
-            technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+            title: "Creating UI Section for the Home Page Using TailwindCSS",
+            description: "Developed responsive UI sections for NextGen Coding using TailwindCSS with modern design and cross-device compatibility.",
+            url: "https://tubular-marigold-cc0618.netlify.app/src/pricing_page.html",
+            thumbnail: "https://tubular-marigold-cc0618.netlify.app/src/pricing_page.html",
+            technologies: ["HTML", "CSS", "TailwindCSS", "JS"],
             icon: "fas fa-shopping-cart"
         },
         {
-            title: "Task Management App",
-            description: "A collaborative task management application with real-time updates and team features.",
-            url: "https://example.com", // Replace with your actual website URL
-            technologies: ["Vue.js", "Firebase", "CSS3"],
+            title: "Replicating a Bootstrap Website to help students learn Bootstrap",
+            description: "Created an educational website with step-by-step tutorials to help students learn Bootstrap framework effectively.",
+            url: "https://keen-faun-8e84a0.netlify.app",
+            thumbnail: "https://keen-faun-8e84a0.netlify.app",
+            technologies: ["HTML", "CSS", "Bootstrap", "JS"],
             icon: "fas fa-tasks"
         },
         {
-            title: "Weather Dashboard",
-            description: "A responsive weather application with location-based forecasts and interactive maps.",
-            url: "https://example.com", // Replace with your actual website URL
-            technologies: ["JavaScript", "API Integration", "Chart.js"],
+            title: "Replicating a Website to help people learn TailwindCSS",
+            description: "Developed a tutorial website with step-by-step guides to teach TailwindCSS fundamentals through practical examples.",
+            url: "https://subtle-boba-394905.netlify.app",
+            thumbnail: "https://subtle-boba-394905.netlify.app",
+            technologies: ["HTML", "CSS", "TailwindCSS", "JS"],
             icon: "fas fa-cloud-sun"
         },
         {
-            title: "Portfolio Website",
-            description: "A responsive portfolio website showcasing creative design and smooth animations.",
-            url: "https://example.com", // Replace with your actual website URL
-            technologies: ["HTML5", "CSS3", "JavaScript"],
+            title: "Multi-language website for a Transit & Import/export Company",
+            description: "Built a comprehensive multi-language website for a transit company using Bootstrap, featuring customs clearance and logistics services.",
+            url: "https://warm-monstera-11c463.netlify.app/",
+            thumbnail: "https://warm-monstera-11c463.netlify.app/",
+            technologies: ["HTML", "CSS", "Bootstrap", "JS"],
             icon: "fas fa-palette"
         },
         {
-            title: "Blog Platform",
-            description: "A content management system with markdown support and user authentication.",
-            url: "https://example.com", // Replace with your actual website URL
-            technologies: ["Next.js", "MongoDB", "TailwindCSS"],
+            title: "Product Showcase Website for Client",
+            description: "A modern product showcase website featuring responsive design and interactive elements to highlight client's products effectively.",
+            url: "https://wondrous-treacle-059bd7.netlify.app/",
+            thumbnail: "https://wondrous-treacle-059bd7.netlify.app/",
+            technologies: ["HTML", "JQuery", "TailwindCSS"],
             icon: "fas fa-blog"
         },
         {
-            title: "Real Estate App",
-            description: "A property listing platform with advanced search filters and virtual tours.",
-            url: "https://example.com", // Replace with your actual website URL
-            technologies: ["React", "Express", "PostgreSQL"],
+            title: "Product Showcase Website For Client",
+            description: "A captivating showcase website for a date selling company featuring elegant design and smooth user experience.",
+            url: "https://lighthearted-beijinho-d61311.netlify.app/",
+            thumbnail: "https://lighthearted-beijinho-d61311.netlify.app/",
+            technologies: ["HTML", "JQuery", "TailwindCSS"],
             icon: "fas fa-home"
+        },
+        {
+            title: "CaseBattle - Full Stack Gaming Platform",
+            description: "A real-time case opening battle platform built with React and TailwindCSS frontend, Express.js backend, and Socket.IO for live multiplayer gameplay.",
+            url: "https://casebattle.netlify.app/",
+            thumbnail: "https://casebattle.netlify.app/",
+            technologies: ["React", "TailwindCSS", "Express.js", "Socket.IO", "Node.js"],
+            icon: "fas fa-gamepad"
         }
     ]
 };
@@ -124,8 +138,10 @@ function generateProjects() {
         projectCard.style.animationDelay = `${index * 0.1}s`;
         
         projectCard.innerHTML = `
-            <div class="project-image">
-                <i class="${project.icon} project-icon"></i>
+            <div class="project-image" style="background-image: linear-gradient(rgba(102, 126, 234, 0.3), rgba(118, 75, 162, 0.3)), url('https://mini.s-shot.ru/1024x768/JPEG/1024/Z100/?${encodeURIComponent(project.thumbnail)}')">
+                <div class="project-overlay">
+                    <span class="view-text">Click to View</span>
+                </div>
             </div>
             <div class="project-content">
                 <h3 class="project-title">${project.title}</h3>
